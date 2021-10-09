@@ -8,3 +8,7 @@ body {
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+Nav {
+  font: 500 5rem "Lobster", cursive;
+}
