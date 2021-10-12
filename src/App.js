@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Navbar, NavbarBrand } from 'reactstrap';
 import Directory from './components/DirectoryComponents';
 import { CAMPSITES } from './shared/campsites';
+import CampsiteInfo from './components/CampsiteInfoComponent';
 import './App.css';
 
 
@@ -21,6 +22,7 @@ class App extends Component {
           </div>
         </Navbar>
         <Directory campsites={this.state.campsites} />
+        <CampsiteInfo campsites={this.state.campsites} />
         
       </div>
     );
