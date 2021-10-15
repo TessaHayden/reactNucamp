@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import Directory from './DirectoryComponents';
+import Directory from './DirectoryComponent';
 import CampsiteInfo from './CampsiteInfoComponent';
 import { CAMPSITES } from '../shared/campsites';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
-import Contact from './ContactComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
+import Contact from './ContactComponent';
 import { COMMENTS } from '../shared/comments';
 import { PARTNERS } from '../shared/partners';
 import { PROMOTIONS } from '../shared/promotions';
 
 class Main extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -22,7 +21,9 @@ class Main extends Component {
             promotions: PROMOTIONS
         };
     }
+
     render() {
+
         const HomePage = () => {
             return (
                 <Home
@@ -39,12 +40,13 @@ class Main extends Component {
                     comments={this.state.comments.filter(comment => comment.campsiteId === +match.params.campsiteId)}
                 />
             );
-        }
+        };
+
         return (
             <div>
                 <Header />
                 <Switch>
-                    <Route path='/home' component="{HomePage}" />
+                    <Route path='/home' component={HomePage} />
                     <Route exact path='/directory' render={() => <Directory campsites={this.state.campsites} />} />
                     <Route path='/directory/:campsiteId' component={CampsiteWithId} />
                     <Route exact path='/contactus' component={Contact} />
@@ -52,23 +54,8 @@ class Main extends Component {
                 </Switch>
                 <Footer />
             </div>
-        )
-    }
-
-    onCampsiteSelect(campsiteId) {
-        this.setState({ selectedCampsite: campsiteId });
-    }
-
-    render() {
-        return (
-            <div>
-                <Header />
-                <Directory campsites={this.state.campsites} onClick={campsiteId => this.onCampsiteSelect(campsiteId)} />
-                <CampsiteInfo campsite={this.state.campsites.filter(campsite => campsite.id === this.state.selectedCampsite)[0]} />
-                <Footer />
-            </div>
         );
-    };
+    }
 }
 
 export default Main;

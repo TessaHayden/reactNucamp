@@ -18,7 +18,7 @@ function Home(props) {
         </div>
     );
 }
-function RenderCard({item}) {
+function RenderCard({ item }) {
     return (
         <Card>
             <CardImg src={item.image} alt={item.name} />
