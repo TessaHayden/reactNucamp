@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function RenderCampsite({campsite}) {
     return (
-        <div class="col-md-5 m-1">
+        <div className="col-md-5 m-1">
             <Card>
                 <CardImg top src={campsite.image} alt={campsite.name} />
                 <CardBody>
