@@ -2,12 +2,13 @@ import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { Loading } from './LoadingComponent';
+import { baseUrl } from '../shared/baseUrl';
 
 function RenderDirectoryItem({campsite}) {
     return (
         <Card>
             <Link to={`/directory/${campsite.id}`} >           
-                <CardImg width="100%" src={campsite.image} alt={campsite.name} />
+                <CardImg width="100%" src={baseUrl + campsite.image} alt={campsite.name} />
                 <CardImgOverlay>
                     <CardTitle>{campsite.name}</CardTitle>
                 </CardImgOverlay>
@@ -34,7 +35,7 @@ function Directory(props) {
         );
     }
     if (props.campsites.errMess) {
-        return(
+        return (
             <div className="container">
                 <div className="row">
                     <div className="col">

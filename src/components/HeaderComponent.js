@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
+import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron, 
+    Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
@@ -7,7 +8,7 @@ class Header extends Component {
         super(props);
         this.handleLogin = this.handleLogin.bind(this);
         this.toggleModal = this.toggleModal.bind(this);
-        this.toggleNav = this.toggleNav.bind(this);
+        this.toggleNav = this.toggleNav.bind(this);  
         this.state = {
             isNavOpen: false,
             isModalOpen: false
