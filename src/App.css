@@ -5,9 +5,10 @@ h1, h2, h3, .card-body> .card-title {
   font-family: "Lobster", cursive;
 }
 .card-title {
-  font: 500 1.25rem "Lobster", cursive;
+  font-weight: 500;
+  font-size: 1.25rem;
 }
-h32 {
+h2 {
   color: #3046C5;
 }
 .card-img-overlay .card-title {
@@ -40,4 +41,18 @@ h32 {
 }
 Nav {
   font: 500 1.25rem "Lobster", cursive;
+}
+.page-enter {
+  opacity: 0;
+}
+.page-enter-active {
+  opacity:1;
+  transition: 300ms ease-out;
+}
+.page-exit {
+  opacity: 1;
+}
+.page-exit-active {
+  opacity: 0;
+  transition: 300ms ease-in;
 }
