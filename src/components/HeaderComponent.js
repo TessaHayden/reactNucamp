@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron, 
     Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import 'animate.css';
 
 class Header extends Component {
     constructor(props) {
@@ -36,8 +37,8 @@ class Header extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col">
-                                <h1>NuCamp</h1>
-                                <h2>a better way to camp</h2>
+                                <h1 class="animate__animated animate__jackInTheBox">NuCamp</h1>
+                                <h2 class="animate__animated animate__slideInLeft animate__delay-1s">a better way to camp</h2>
                             </div>
                         </div>
                     </div>
